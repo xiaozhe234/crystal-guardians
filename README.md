@@ -3,6 +3,12 @@
 一个可直接运行的 HTML5 Canvas Roguelike 虚蚀领域冒险游戏原型，无需构建工具、无需联网，双击 `index.html` 即可游玩。
 也可以用 Node 起本地静态服务器游玩（零依赖，端口可配置）：`node server.js` 后访问 `http://localhost:8080/`。
 
+## 🎮 在线试玩
+
+**<https://xiaozhe234.github.io/crystal-guardians/>** —— 打开即玩（联机模式需自行 `node server.js` 起服务端）。
+
+![晶域守卫者 游戏画面](docs/screenshot.png)
+
 ## 快速开始
 1. 双击打开 `index.html`（推荐 Chrome / Edge）。
 2. 主菜单 → 「开始游戏」→ 选择角色 → 进入「虚蚀领域」或「元晶守卫战」。
