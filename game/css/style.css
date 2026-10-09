@@ -1,0 +1,116 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0f1a;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+#game {
+  display: block;
+  cursor: crosshair;
+  touch-action: manipulation;
+}
+
+/* ---------- 联机大厅 ---------- */
+#net-panel {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 470px; max-width: 92vw;
+  max-height: 86vh; overflow-y: auto;
+  background: rgba(13, 20, 32, 0.97);
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  border-radius: 14px;
+  padding: 20px 22px;
+  color: #e2e8f0;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  display: none;
+}
+.np-title { font-size: 22px; font-weight: 700; color: #ffd54f; text-align: center; margin-bottom: 6px; }
+.np-status { font-size: 12px; color: #94a3b8; text-align: center; margin-bottom: 12px; }
+.np-row { display: flex; gap: 8px; align-items: center; margin: 8px 0; flex-wrap: wrap; }
+.np-row label { font-size: 13px; color: #94a3b8; width: 52px; }
+.np-row input, .np-row select {
+  flex: 1; min-width: 0;
+  background: #182438; color: #e2e8f0;
+  border: 1px solid #2c3a52; border-radius: 8px;
+  padding: 8px 10px; font-size: 14px; outline: none;
+}
+.np-row button, .np-joinbtn {
+  background: #2f6f4f; color: #fff;
+  border: none; border-radius: 8px;
+  padding: 8px 14px; font-size: 14px; cursor: pointer;
+}
+.np-row button:hover, .np-joinbtn:hover { background: #3a855f; }
+#net-create { background: #2f4a6f; }
+#net-create:hover { background: #3f5f8f; }
+.np-rooms { margin: 10px 0; }
+.np-hint { color: #64748b; font-size: 13px; text-align: center; padding: 10px 0; }
+.np-roomrow {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  background: #182438; border: 1px solid #2c3a52; border-radius: 10px;
+  padding: 10px 12px; margin: 6px 0; font-size: 13px;
+}
+.np-rid { font-weight: 700; color: #7fd4ff; }
+.np-room { margin-top: 10px; border-top: 1px dashed #2c3a52; padding-top: 10px; }
+.np-roomid { font-size: 15px; margin-bottom: 8px; }
+.np-roomid b { color: #ffd54f; }
+.np-playerrow {
+  background: #182438; border: 1px solid #2c3a52; border-radius: 8px;
+  padding: 8px 12px; margin: 5px 0; font-size: 14px;
+}
+.np-playerrow i { color: #7fd4ff; font-style: normal; }
+.np-err { color: #f87171; font-size: 13px; min-height: 18px; text-align: center; }
+.np-foot { margin-top: 8px; text-align: center; }
+.np-foot button { background: #5a5a5a; }
+.np-foot button:hover { background: #6f6f6f; }
+.np-tip { font-size: 12px; color: #64748b; text-align: center; margin-top: 10px; }
+
+/* ---------- 手机端触控 ---------- */
+#mob-orient {
+  display: none;
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: #0a0f1a; z-index: 9999;
+  justify-content: center; align-items: center;
+  flex-direction: column;
+}
+.mob-orient-inner {
+  text-align: center; color: #e2e8f0; font-size: 18px; line-height: 2;
+}
+.mob-orient-ico { font-size: 56px; display: block; margin-bottom: 10px; }
+
+.mob-btn {
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(255,255,255,0.2);
+  color: #e2e8f0;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.mob-fire {
+  background: rgba(239,68,68,0.3);
+  border-color: rgba(239,68,68,0.5);
+  font-size: 30px;
+}
+.mob-skill {
+  background: rgba(56,189,248,0.25);
+  border-color: rgba(56,189,248,0.45);
+}
+.mob-interact {
+  background: rgba(74,222,128,0.22);
+  border-color: rgba(74,222,128,0.4);
+}
+.mob-weapon {
+  background: rgba(251,191,36,0.22);
+  border-color: rgba(251,191,36,0.4);
+}
+.mob-pause, .mob-gear {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
+  font-size: 14px;
+}
